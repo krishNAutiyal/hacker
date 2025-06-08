@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hacking Animation</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00FF00;
+      font-family: monospace;
+      font-size: 1.2rem;
+      padding: 20px;
+    }
+
+    #output {
+      width: 50vw;
+      margin: auto;
+      margin-top: 20vh;
+    }
+
+    #progress-container {
+      display: none;
+      /* ✅ Add this line */
+      margin-top: 20px;
+      width: 53%;
+      background-color: #373737;
+      height: 20px;
+      border-radius: 43px;
+      position: relative;
+      margin: auto;
+    }
+
+
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #00FF00;
+      transition: width 0.1s;
+      border-radius: 43px;
+    }
+
+    #progress-text {
+      color: #00FF00;
+      position: absolute;
+      top: 5;
+      left: 50%;
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    #start-btn {
+      display: block;
+      margin: 30vh auto;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: black;
+      color: #00FF00;
+      border: 2px solid #00FF00;
+      cursor: pointer;
+      font-family: monospace;
+      transition: background-color 0.2s;
+    }
+
+    #start-btn:hover {
+      background-color: #003300;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="start-btn">Click me to earn prize</button>
+
+  <div id="output"></div>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+    <p id="progress-text">0%</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
